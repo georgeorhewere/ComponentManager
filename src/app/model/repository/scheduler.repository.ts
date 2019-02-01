@@ -32,5 +32,13 @@ export class SchedulerRepository {
         return this.district_calendars;
     }
 
+    getClassMeetingSchedule():ClassMeetingOption[]{
+        return this.meeting_options;
+    }
+
+    getClassDuration():DurationMeetingOption[]{
+        return this.durations_options;
+    }
+
 
 }

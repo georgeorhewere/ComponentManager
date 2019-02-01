@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <div id="step-header" class="ml-2">
+        <h2>STEP 1: Define Your Meeting Schedule</h2>
+        <hr class="">
+    </div>
+    <div class="row m-4">
+
+        <div>
+            <h5>Choose District Calendar</h5>
+            <select class="w-45 p-2">
+                <option>Select a District's Calendar</option>
+                <option *ngFor="let cal of getCalendars()"><span>{{ cal.CalendarText}} </span></option>
+            </select>
+        </div>
+
+
+    </div>
+    <div class="row-stretch m-4">
+
+        <div>
+            <h5>Choose Type of Class Meeting Schedule.</h5>
+        </div>
+
+        <div class="d-md-block" *ngFor="let schedule of getMeetingSchedule()">
+            <input type="radio" name="meeting-option" [checked]="schedule.isDefault"/> <span class="ml-1">{{schedule.meetingOption}}</span>
+
+        </div>
+
+    </div>
+    <div class="row-stretch m-4">
+
+        <div><h5>Set the Duration.</h5></div>
+
+            <div class="d-md-block" *ngFor="let duration of getClassDuration()">
+                <input type="radio" name="duration-option" [checked]="duration.isDefault"/>
+                <span class="ml-1">{{duration.durationOption}}</span>
+            </div>
+
+    </div>
+    <div id="step-footer" class="ml-2">
+        <hr class="">
+        <span class="btn btn-success" routerLink="/Next" routerLinkActive="active" title="Next"> Next</span>
+    </div>
+
+</div>
