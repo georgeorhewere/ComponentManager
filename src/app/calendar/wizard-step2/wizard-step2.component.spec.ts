@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WizardStep2Component } from './wizard-step2.component';
+import {expect, describe} from "@angular/core/testing/src/testing_internal";
 
 describe('WizardStep2Component', () => {
   let component: WizardStep2Component;

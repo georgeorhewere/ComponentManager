@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ScheduleMeetingDays} from '../../model/data/schedulemeetingdays'
 
 @Component({
   selector: 'app-wizard-step2',
@@ -8,9 +9,11 @@ import { Router } from '@angular/router';
 })
 export class WizardStep2Component implements OnInit {
 
+  public meetingDays: ScheduleMeetingDays;
   constructor(private router:Router) { }
 
   ngOnInit() {
+    this.meetingDays = new ScheduleMeetingDays();
   }
 
 

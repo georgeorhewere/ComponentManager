@@ -27,6 +27,10 @@
     <div>
       <h5>Choose Class Meeting Days</h5>
     </div>
+    <span class="ml-3" *ngFor="let day of meetingDays.getMeetingDaysOfTheWeek()">
+    <input type="checkbox" name="meet-option" [checked]="day.selected"/>
+    <span class="ml-1">{{day.day}}</span>
+  </span>
 
   </div>
   <div class="row-stretch m-4">
