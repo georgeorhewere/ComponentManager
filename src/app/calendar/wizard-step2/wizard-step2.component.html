@@ -1,3 +1,43 @@
-<p>
-  wizard-step2 works!
-</p>
+<div class="container-fluid">
+  <div id="step-header" class="ml-2">
+    <h2>STEP 2: Define Your Class TimeFrame</h2>
+    <hr class="">
+  </div>
+  <div class="row m-4">
+
+    <div>
+      <h5>Specify Start and End Date</h5>
+
+      <span>Start Date: </span>
+      <input placeholder="yyyy-mm-dd" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()" (disabled)="disabled" />
+      <span class="p-1" (click)="d.toggle()" type="button" ><i class="fa-calendar"></i></span>
+
+      <span class="ml-3">End Date: </span>
+      <input placeholder="yyyy-mm-dd" ngbDatepicker #c="ngbDatepicker" (click)="c.toggle()" (disabled)="disabled" />
+
+      <span class="p-1" (click)="c.toggle()" type="button" >
+        <i class="fa-calendar-o"></i>
+      </span>
+    </div>
+
+
+  </div>
+  <div class="row-stretch m-4">
+
+    <div>
+      <h5>Choose Class Meeting Days</h5>
+    </div>
+
+  </div>
+  <div class="row-stretch m-4">
+
+    <div><h5>Choose Class Meeting Time</h5></div>
+
+
+  </div>
+  <div id="step-footer" class="ml-2">
+    <hr class="">
+    <span class="btn btn-success" (click)="previousStep()"  title="Previous"> Previous</span>
+  </div>
+
+</div>

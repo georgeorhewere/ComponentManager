@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule, Form} from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 import {Routes, RouterModule} from '@angular/router';
 import { ModelModule } from '../model/modelmodule/modelmodule.module';
 import { CalendarComponent } from './calendarcomponent/calendar.component';
@@ -26,10 +27,10 @@ export const appRoutes:Routes = [
 @NgModule({
   declarations: [CalendarComponent, WizardStep1Component, WizardStep2Component],
   imports: [
-    CommonModule,ModelModule, BrowserModule,FormsModule,RouterModule.forRoot(appRoutes, { useHash: true} )
+    CommonModule,ModelModule, BrowserModule,FormsModule,RouterModule.forChild(appRoutes),NgbModule
   ],
 
-  exports:[CalendarComponent,RouterModule],
+  exports:[CalendarComponent,RouterModule,NgbModule],
 
 })
 export class CalendarModule { }

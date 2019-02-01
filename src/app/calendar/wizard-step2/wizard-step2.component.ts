@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-wizard-step2',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WizardStep2Component implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
 
+
+
+  previousStep(){
+    this.router.navigateByUrl("/Previous", { skipLocationChange: true });
+  }
 }

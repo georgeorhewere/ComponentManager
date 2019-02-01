@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {Router } from '@angular/router';
 import { DistrictCalendar, DurationMeetingOption,ClassMeetingOption } from '../../model/districtcalendar'
 import { SchedulerRepository} from '../../model/repository/scheduler.repository'
+
 
 
 @Component({
@@ -10,7 +12,7 @@ import { SchedulerRepository} from '../../model/repository/scheduler.repository'
 })
 export class WizardStep1Component implements OnInit {
 
-  constructor(private  repository:SchedulerRepository) {
+  constructor(private  repository:SchedulerRepository, private router:Router) {
 
   }
 
@@ -29,4 +31,7 @@ export class WizardStep1Component implements OnInit {
     return this.repository.getClassDuration();
   }
 
+  nextStep(){
+    this.router.navigateByUrl("/Next", { skipLocationChange: true });
+  }
 }
