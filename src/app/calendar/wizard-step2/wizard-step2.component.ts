@@ -16,7 +16,8 @@ export class WizardStep2Component implements OnInit {
     this.meetingDays = new ScheduleMeetingDays();
   }
 
-
+  start_time={hour:8,minute:30};
+  end_time={hour:18,minute:30};
 
   previousStep(){
     this.router.navigateByUrl("/Previous", { skipLocationChange: true });

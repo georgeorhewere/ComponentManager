@@ -7,7 +7,7 @@
 
         <div>
             <h5>Choose District Calendar</h5>
-            <select class="w-45 p-2">
+            <select class="w-45 p-2" required>
                 <option>Select a District's Calendar</option>
                 <option *ngFor="let cal of getCalendars()"><span>{{ cal.CalendarText}} </span></option>
             </select>

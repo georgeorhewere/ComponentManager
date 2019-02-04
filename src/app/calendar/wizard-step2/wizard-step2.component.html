@@ -36,7 +36,12 @@
   <div class="row-stretch m-4">
 
     <div><h5>Choose Class Meeting Time</h5></div>
+    <span>Start Time: </span>
+    <ngb-timepicker [(ngModel)]="start_time" class="w-25"></ngb-timepicker>
 
+
+    <span class="ml-3">End Time: </span>
+    <ngb-timepicker [(ngModel)]="end_time"></ngb-timepicker>
 
   </div>
   <div id="step-footer" class="ml-2">

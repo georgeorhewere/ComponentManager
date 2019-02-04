@@ -32,6 +32,8 @@ export class WizardStep1Component implements OnInit {
   }
 
   nextStep(){
+    
+
     this.router.navigateByUrl("/Next", { skipLocationChange: true });
   }
 }
